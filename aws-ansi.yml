@@ -1,5 +1,5 @@
 - name: create ec2 instance using ansible
-  host: local
+  hosts: local
   connection: local
   become: yes
   vars:
@@ -15,12 +15,12 @@
   tasks:
     - name: create aws ec2 using ansible
       amazon.aws.ec2_instance:
-        - name: {{ item }}
-          vpc_subnet_id: {{ subnetid }}
-          instance_type: {{ inst }}
-          security_group: {{ secg }}
-          image_id: {{ image }}
-      loop: {{ instances }}
+        - name: "{{ item }}"
+          vpc_subnet_id: "{{ subnetid }}"
+          instance_type: "{{ inst }}"
+          security_group: "{{ secg }}"
+          image_id: "{{ image }}"
+      loop: "{{ instances }}"
       register: ec2_instances
 
     - name: print the output 
