@@ -1,0 +1,28 @@
+- name: create ec2 instance using ansible
+  host: local
+  connection: local
+  become: yes
+  vars:
+    subnetid: subnet-0f3fd2d569badbdac
+    inst: t2.micro
+    secg: sg-09c956a01686bdc1d
+    image: ami-0b4f379183e5706b9
+    instances:
+      - mysql
+      - backend
+      - frontend
+    zone: chocojohns.online 
+  tasks:
+    - name: create aws ec2 using ansible
+      amazon.aws.ec2_instance:
+        - name: {{ item }}
+          vpc_subnet_id: {{ subnetid }}
+          instance_type: {{ inst }}
+          security_group: {{ secg }}
+          image_id: {{ image }}
+      loop: {{ instances }}
+      register: ec2_instances
+
+    - name: print the output 
+      ansible.builtin.debug:
+        msg: "{{ ec2_instances}}"
