@@ -1,6 +1,6 @@
 - name: create ec2 instance using ansible
   hosts: local
-  connection: local
+  connection: localhost
   become: yes
   vars:
     subnetid: "subnet-0f3fd2d569badbdac"
