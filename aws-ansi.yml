@@ -7,7 +7,7 @@
     inst: t2.micro
     secg: sg-09c956a01686bdc1d
     image: ami-09c813fb71547fc4f
-    reg: us-east-1
+    reg: us-east-1a
     instances:
       - mysql
       - backend
