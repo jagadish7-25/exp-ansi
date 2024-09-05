@@ -53,7 +53,7 @@
         name:
         - PyMySQL
         - cryptography
-        executable: pip3.6
+        executable: pip3.9
     
     - name: import mysql data
       community.mysql.mysql_db:

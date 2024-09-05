@@ -10,7 +10,7 @@
       ansible.builtin.pip:
         name:
           - PymySQL
-        executable: pip3.6
+        executable: pip3.9
 
     - name: installing myql server and configuring
       ansible.builtin.package:
