@@ -15,7 +15,7 @@
     - name: installing myql server and configuring
       ansible.builtin.package:
         name: mysql-server
-        state: presnet
+        state: present
 
     - name: starting mysql service
       ansible.builtin.service:
