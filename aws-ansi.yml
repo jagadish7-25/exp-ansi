@@ -6,8 +6,7 @@
     subnetid: subnet-0f3fd2d569badbdac
     inst: t2.micro
     secg: sg-09c956a01686bdc1d
-    image: ami-0b4f379183e5706b9
-    reg: us-east-1
+    image: ami-09c813fb71547fc4f
     instances:
       - mysql
       - backend
