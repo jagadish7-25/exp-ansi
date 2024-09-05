@@ -7,6 +7,7 @@
     inst: t2.micro
     secg: sg-09c956a01686bdc1d
     image: ami-0b4f379183e5706b9
+    reg: us-east-1
     instances:
       - mysql
       - backend
@@ -14,7 +15,7 @@
     zone: chocojohns.online 
   tasks:
     - name: installing boto3 and botocore
-      ansible.builtin.pip:
+      ansible.builtin.pip: 
         name: 
           - boto3
           - botocore
@@ -26,6 +27,7 @@
         instance_type: "{{ inst }}"
         security_group: "{{ secg }}"
         image_id: "{{ image }}"
+        region: "{{ reg }}"
       loop: "{{ instances }}"
       register: ec2_instances
 
