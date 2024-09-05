@@ -3,11 +3,11 @@
   connection: local
   become: yes
   vars:
-    subnetid: subnet-0f3fd2d569badbdac
-    inst: t2.micro
-    secg: sg-09c956a01686bdc1d
-    image: ami-09c813fb71547fc4f
-    reg: us-east-1a
+    subnetid: "subnet-0f3fd2d569badbdac"
+    inst: "t2.micro"
+    secg: "sg-09c956a01686bdc1d"
+    image: "ami-09c813fb71547fc4f"
+    reg: "us-east-1a"
     instances:
       - mysql
       - backend
