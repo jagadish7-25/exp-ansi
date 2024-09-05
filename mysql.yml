@@ -9,7 +9,7 @@
     - name: install mysql dependencies
       ansible.builtin.pip:
         name:
-          - PyMySQL
+          - PymySQL
         executable: pip3.6
 
     - name: installing myql server and configuring
