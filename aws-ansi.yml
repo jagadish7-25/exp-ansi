@@ -26,7 +26,6 @@
         instance_type: "{{ inst }}"
         security_group: "{{ secg }}"
         image_id: "{{ image }}"
-        region: "{{ reg }}"
       loop: "{{ instances }}"
       register: ec2_instances
 
