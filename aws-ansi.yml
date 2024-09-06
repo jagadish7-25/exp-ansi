@@ -19,7 +19,7 @@
         name: 
           - boto3
           - botocore
-        executable: pip3.9
+        executable: pip3.6
     - name: create aws ec2 using ansible
       amazon.aws.ec2_instance:
         name: "{{ item }}"
